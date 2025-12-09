@@ -1,5 +1,5 @@
 {
-  "name": "envdiff",
+  "name": "@dcs-soni/envdiff",
   "version": "1.0.0",
   "description": "Compare .env files to find missing or extra variables. Values are never read.",
   "type": "module",
