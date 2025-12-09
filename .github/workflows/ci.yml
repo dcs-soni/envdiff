@@ -26,9 +26,10 @@ jobs:
 
       - name: Verify zero runtime dependencies
         run: |
-          if [ -n "$(npm ls --prod --parseable 2>/dev/null)" ]; then
+          DEPS=$(npm ls --omit=dev --parseable 2>/dev/null | tail -n +2)
+          if [ -n "$DEPS" ]; then
             echo "Error: Runtime dependencies detected!"
-            npm ls --prod
+            npm ls --omit=dev
             exit 1
           fi
           echo "Verified: Zero runtime dependencies"
