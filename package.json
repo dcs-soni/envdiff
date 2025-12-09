@@ -1,0 +1,45 @@
+{
+  "name": "envdiff",
+  "version": "1.0.0",
+  "description": "Compare .env files to find missing or extra variables. Values are never read.",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./parse": "./dist/parse.js",
+    "./compare": "./dist/compare.js",
+    "./format": "./dist/format.js"
+  },
+  "bin": {
+    "envdiff": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "env",
+    "dotenv",
+    "diff",
+    "compare",
+    "environment",
+    "variables",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.2",
+    "typescript": "^5.3.0"
+  }
+}
